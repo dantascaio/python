@@ -11,10 +11,11 @@ def jogar():
 
     while(not enforcou and not advinhou):
         print('jogando')
-        letra_buscada = input('Insira uma letra')
+        letra_buscada = input('Insira uma letra: ')
+        index = 0
         for letra in palavra_secreta:
-            if(letra.lower() == letra_buscada.lower()):
-                print(f'encontrei a letra {letra_buscada}')
-
+            if(letra.lower() == letra_buscada.strip().lower()):
+                print(f'encontrei a letra {letra_buscada} na posicao {index}')
+            index += 1
 if(__name__ == '__main__'):
     jogar()
